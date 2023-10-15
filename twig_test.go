@@ -79,7 +79,7 @@ func TestPoolRequest(t *testing.T) {
 	var errCount = 0
 
 	for range [100]struct{}{} {
-		c = udsc.UDSClient{Addr: "/tmp/OctopusTwig.sock"}
+		c = udsc.UDSClient{Addr: "/var/run/OctopusTwig.sock"}
 		err := c.Dial()
 		if err != nil {
 			fmt.Println("error", err)
